@@ -115,7 +115,7 @@ export function TaskProvider({ children }) {
   );
 }
 
-// IMPORTANT: This is what AddTask.jsx is looking for
+// eslint-disable-next-line react-refresh/only-export-components
 export function useTasks() {
   return useContext(TaskContext);
 }

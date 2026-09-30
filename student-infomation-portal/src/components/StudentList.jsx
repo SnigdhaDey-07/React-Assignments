@@ -1,4 +1,4 @@
-import StudentCard from "./StudentCard_temp";
+import StudentCard from "./StudentCard";
 
 function StudentList(props) {
   return (

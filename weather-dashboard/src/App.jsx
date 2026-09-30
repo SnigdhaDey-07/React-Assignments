@@ -10,7 +10,7 @@ function App() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
-  const API_KEY = import.meta.env.VITE_WEATHER_API_KEY;
+  const API_KEY = import.meta.env.VITE_WEATHER_API_KEY || "d80ffea7bd6add65fe7ecf17dcf57c30";
 
   const fetchWeather = async (searchCity) => {
     if (!searchCity.trim()) {
@@ -42,7 +42,11 @@ function App() {
   };
 
   useEffect(() => {
-    fetchWeather(city);
+    if (city.trim()) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
+      fetchWeather(city);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const handleSearch = (searchCity) => {
