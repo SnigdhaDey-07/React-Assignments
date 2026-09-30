@@ -1,0 +1,236 @@
+/* ================================
+   STUDENT PORTAL - GIRLY THEME
+   ================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", "Segoe UI", sans-serif;
+  background: linear-gradient(
+    135deg,
+    #fff0f7,
+    #f5efff,
+    #fff7fb
+  );
+  min-height: 100vh;
+  color: #4b3b4f;
+}
+
+/* ================================
+   MAIN APP
+   ================================ */
+
+.app {
+  min-height: 100vh;
+}
+
+/* ================================
+   HEADER
+   ================================ */
+
+header {
+  text-align: center;
+  padding: 45px 20px;
+  background: linear-gradient(
+    135deg,
+    #ff9fcf,
+    #c8a2ff
+  );
+  color: white;
+  box-shadow: 0 8px 25px rgba(190, 120, 180, 0.25);
+  border-bottom-left-radius: 35px;
+  border-bottom-right-radius: 35px;
+}
+
+header h1 {
+  font-size: 38px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  text-shadow: 0 3px 8px rgba(120, 70, 120, 0.2);
+}
+
+header p {
+  font-size: 16px;
+  opacity: 0.95;
+}
+
+/* ================================
+   STUDENT LIST
+   ================================ */
+
+.student-list {
+  max-width: 1200px;
+  margin: 45px auto;
+  padding: 0 25px;
+
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(280px, 1fr)
+  );
+
+  gap: 28px;
+}
+
+/* ================================
+   STUDENT CARD
+   ================================ */
+
+.student-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.9);
+
+  padding: 30px 25px;
+
+  border-radius: 25px;
+
+  text-align: center;
+
+  border: 2px solid #f7d7ed;
+
+  box-shadow:
+    0 10px 30px rgba(180, 120, 180, 0.12);
+
+  transition: all 0.3s ease;
+
+  overflow: hidden;
+}
+
+/* Cute top decoration */
+
+.student-card::before {
+  content: "♡";
+  position: absolute;
+  top: 12px;
+  right: 18px;
+
+  font-size: 25px;
+  color: #ff9dcc;
+}
+
+/* Hover effect */
+
+.student-card:hover {
+  transform: translateY(-10px) rotate(0.5deg);
+
+  border-color: #dda9ff;
+
+  box-shadow:
+    0 18px 35px rgba(180, 120, 190, 0.2);
+}
+
+/* ================================
+   STUDENT PHOTO
+   ================================ */
+
+.student-card img {
+  width: 120px;
+  height: 120px;
+
+  object-fit: cover;
+
+  border-radius: 50%;
+
+  border: 5px solid white;
+
+  outline: 3px solid #efa8d0;
+
+  box-shadow:
+    0 8px 20px rgba(190, 120, 180, 0.25);
+
+  margin-bottom: 18px;
+}
+
+/* ================================
+   STUDENT NAME
+   ================================ */
+
+.student-card h2 {
+  color: #b84d91;
+
+  font-size: 23px;
+
+  margin-bottom: 18px;
+}
+
+/* ================================
+   STUDENT DETAILS
+   ================================ */
+
+.student-card p {
+  background: #fff4fa;
+
+  margin: 8px 0;
+
+  padding: 9px 12px;
+
+  border-radius: 12px;
+
+  font-size: 14px;
+
+  color: #665267;
+
+  border: 1px solid #f8ddec;
+}
+
+.student-card p strong {
+  color: #a34f88;
+}
+
+/* ================================
+   FOOTER
+   ================================ */
+
+footer {
+  margin-top: 50px;
+
+  padding: 25px;
+
+  text-align: center;
+
+  background: linear-gradient(
+    135deg,
+    #c8a2ff,
+    #ff9fcf
+  );
+
+  color: white;
+
+  border-top-left-radius: 35px;
+  border-top-right-radius: 35px;
+
+  box-shadow:
+    0 -5px 20px rgba(180, 120, 180, 0.15);
+}
+
+footer p {
+  font-size: 14px;
+}
+
+/* ================================
+   MOBILE
+   ================================ */
+
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 28px;
+  }
+
+  header p {
+    font-size: 14px;
+  }
+
+  .student-list {
+    grid-template-columns: 1fr;
+    padding: 0 18px;
+  }
+
+  .student-card {
+    padding: 25px 20px;
+  }
+}
